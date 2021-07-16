@@ -1,8 +1,6 @@
-# Guestline - Hotel Group Page
+# Guestline Code Test
 
-Thank you for your application. We are excited that you are interested in working at Guestline.
-
-## The challenge
+## The challenge - Hotel Group Page
 
 Your challenge is to product a page showing a list of hotels and their rooms.
 
