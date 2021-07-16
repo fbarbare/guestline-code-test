@@ -6,7 +6,6 @@ import { getEnvironmentVariable } from '../envVars';
 import { RoomRatesResponse } from '../types/hotels';
 
 import Hotel, { HotelProps } from './Hotel';
-import { IntFromString } from 'io-ts-types';
 
 const hotelApiOrigin = getEnvironmentVariable('REACT_APP_HOTEL_API_ORIGIN');
 const render = (props: HotelProps) => {
