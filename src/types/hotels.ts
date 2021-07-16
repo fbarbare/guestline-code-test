@@ -32,6 +32,8 @@ export const HotelType = t.intersection([
   })
 ]);
 export interface HotelType extends t.TypeOf<typeof HotelType> {}
+export const HotelsResponse = t.array(HotelType);
+export interface HotelsResponse extends t.TypeOf<typeof HotelsResponse> {}
 
 export const RoomType = t.strict({
   id: t.string,
@@ -62,6 +64,3 @@ export const RoomRatesResponse = t.strict({
   ratePlans: t.array(RatePlanType)
 });
 export interface RoomRatesResponse extends t.TypeOf<typeof RoomRatesResponse> {}
-
-export const HotelsResponse = t.array(HotelType);
-export interface HotelsResponse extends t.TypeOf<typeof HotelsResponse> {}
