@@ -41,3 +41,8 @@ For other requirements, please see the attached mockup sketch. Note that the moc
 
 - Make sure you installed the dependencies with `npm ci`
 - build the project with `npm run lint`
+
+## What's next
+
+- Create the filtering mechanism
+- Rework the design
