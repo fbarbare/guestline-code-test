@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Guestline - Hotel Group Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Thank you for your application. We are excited that you are interested in working at Guestline.
 
-## Available Scripts
+## The challenge
 
-In the project directory, you can run:
+Your challenge is to product a page showing a list of hotels and their rooms.
 
-### `yarn start`
+Please use [React](https://reactjs.org) and (preferably) [Typescript](https://www.typescriptlang.org/) to implement this challenge as this is our platform of choice. There are no other restrictions on technology choices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To get the information to present, you will need to query the following API:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`https://obmng.dbm.guestline.net/api/hotels?collection-id=OBMNG`
 
-### `yarn test`
+This returns a list of hotels, with an Id. The Id can be used to query this query for the room types:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`https://obmng.dbm.guestline.net/api/roomRates/OBMNG/[hotelId]` for example, `https://obmng.dbm.guestline.net/api/roomRates/OBMNG/OBMNG1`
 
-### `yarn build`
+Guests using site should be able to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Filter based on the star rating of the hotel, that is, given I have selected 3 stars, then I am able to see all hotels with a 3 and above rating.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Filter based on the capacity of the room. That is, when I have selected 1 adult and 1 child then I am able to see all rooms with at least that capacity.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For other requirements, please see the attached mockup sketch. Note that the mockup attempts to show hotel images. The the URLs can be found in the response to the initial request.
 
-### `yarn eject`
+## Running the project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Make sure you installed the dependencies with `npm ci`
+- Run the dev environment with `npm start`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Running the tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Make sure you installed the dependencies with `npm ci`
+- Run the test suite with `npm t`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Building the project
 
-## Learn More
+- Make sure you installed the dependencies with `npm ci`
+- build the project with `npm run build`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Run the linting on the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Make sure you installed the dependencies with `npm ci`
+- build the project with `npm run lint`
