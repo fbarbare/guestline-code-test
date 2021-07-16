@@ -64,7 +64,7 @@ const Hotel: React.FC<HotelProps> = ({
   return (
     <Card>
       <Grid container>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={7}>
           <ImageGallery
             showPlayButton={images.length > 1}
             showBullets={images.length > 1}
@@ -84,7 +84,7 @@ const Hotel: React.FC<HotelProps> = ({
             )}
           />
         </Grid>
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={5}>
           <CardContent>
             <Typography variant="h2">{name}</Typography>
             <Typography variant="body1">
@@ -95,16 +95,16 @@ const Hotel: React.FC<HotelProps> = ({
       </Grid>
       {roomRatesResult.data && (
         <CardContent data-name="rooms">
-          {roomRatesResult.data.rooms.map(({ id, name, occupancy }) => (
+          {roomRatesResult.data.rooms.map(({ id, name, occupancy }, index) => (
             <div key={id} data-name="room">
+              {index > 0 && <Divider className={classes.roomDivider} />}
+
               <Typography variant="h3" gutterBottom>
                 {name}
               </Typography>
 
               <Typography>Adults: {occupancy.maxAdult}</Typography>
               <Typography gutterBottom>Children: {occupancy.maxChildren}</Typography>
-
-              <Divider className={classes.roomDivider} />
             </div>
           ))}
         </CardContent>
